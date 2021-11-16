@@ -9,12 +9,12 @@ function Index(props) {
   });
 
   // handleChange function for form
-  const handleChange = (event) => {
+  const handleChange = event => {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
   };
 
   // handle submit function for form
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     props.createBookmarks(newForm);
     setNewForm({
@@ -25,7 +25,7 @@ function Index(props) {
 
   // loaded function
   const loaded = () => {
-    return props.createBookmarks.map((bookmark) => (
+    return props.bookmarks.map((bookmark) => (
       <div key={bookmark._id} className="bookmark">
         <Link to={`/bookmarks/${bookmark._id}`}><h1>{bookmark.name}</h1></Link>
         <img src={bookmark.image} alt={bookmark.name} />
