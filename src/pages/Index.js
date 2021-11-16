@@ -9,12 +9,12 @@ function Index(props) {
   });
 
   // handleChange function for form
-  const handleChange = (event) => {
+  const handleChange = event => {
     setNewForm({ ...newForm, [event.target.name]: event.target.value });
   };
 
   // handle submit function for form
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     props.createBookmarks(newForm);
     setNewForm({
