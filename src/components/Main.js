@@ -6,7 +6,7 @@ import {useState, useEffect} from 'react'
 function Main(props) {
 
   const [bookmarks, setBookmarks] = useState(null)
-  const URL = "https://ringo-people-scobey.herokuapp.com/people/";
+  const URL = "https://bookmarked-back.herokuapp.com/bookmark";
 
   const getBookmark = async () => {
     const response = await fetch(URL);
@@ -48,7 +48,7 @@ function Main(props) {
   return (
     <Switch>
       <Route exact path="/">
-        <Index bookmarks={bookmarks} createBookmark={createBookmark} />
+        <Index bookmarks={bookmarks} createBookmarks={createBookmark} />
       </Route>
       <Route path="/bookmarks/:id" render={(rp) =>
         (<Show {...rp} updateBookmark={updateBookmark} deleteBookmark={deleteBookmark} />
