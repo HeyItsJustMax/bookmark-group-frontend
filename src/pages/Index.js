@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function Index(props) {
   // state to hold formData
   const [newForm, setNewForm] = useState({
-    name: "",
+    title: "",
     url: ""
   });
 
@@ -18,7 +18,7 @@ function Index(props) {
     event.preventDefault();
     props.createBookmarks(newForm);
     setNewForm({
-      name: "",
+      title: "",
       url: ""
     });
   };
@@ -27,9 +27,7 @@ function Index(props) {
   const loaded = () => {
     return props.bookmarks.map((bookmark) => (
       <div key={bookmark._id} className="bookmark">
-        <Link to={`/bookmarks/${bookmark._id}`}><h1>{bookmark.name}</h1></Link>
-        <img src={bookmark.image} alt={bookmark.name} />
-        <h3>{bookmark.title}</h3>
+        <Link to={`/bookmarks/${bookmark._id}`}><h1>{bookmark.title}</h1></Link>
       </div>
     ));
   };
@@ -42,9 +40,9 @@ function Index(props) {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          value={newForm.name}
-          name="name"
-          placeholder="name"
+          value={newForm.title}
+          name="title"
+          placeholder="title"
           onChange={handleChange}
         />
         <input
