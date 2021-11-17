@@ -10,8 +10,7 @@ function Header(props){
 
     return (
       <div className="nav">
-        <Link to="/" bookmarks={bookmarks} createBookmarks={createBookmarks}>Index</Link>
-        <Link to="/:id">Show</Link>
+        <Link to="/" bookmarks={bookmarks} createBookmarks={createBookmarks}>My Bookmarks</Link>
       </div>
     )
   } 

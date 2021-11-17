@@ -15,29 +15,27 @@ function Show(props) {
   // handleSubmit for form
   const handleSubmit = event => {
     event.preventDefault()
-    props.updateBookmarks(editForm)
+    props.updateBookmark(editForm, bookmark._id)
     props.history.push("/")
   }
 
   const removeBookmark = () => {
-    props.deleteBookmarks(bookmark._id)
+    props.deleteBookmark(bookmark._id)
     props.history.push("/")
   }
 
   return (
     <div className="bookmark">
-      <h1>{bookmark.name}</h1>
-      <h2>{bookmark.title}</h2>
-      <img src={bookmark.image} alt={bookmark.name} />
+      <h1>{bookmark.title}</h1>
       <button id="delete" onClick={removeBookmark}>
         DELETE
       </button>
       <form onSubmit={handleSubmit}>
-      <input
+        <input
           type="text"
-          value={editForm.name}
-          name="name"
-          placeholder="name"
+          value={editForm.title}
+          name="title"
+          placeholder="title"
           onChange={handleChange}
         />
         <input

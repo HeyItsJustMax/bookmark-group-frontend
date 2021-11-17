@@ -40,5 +40,24 @@
 .nav {
   display: flex;
   justify-content: space-evenly;
-  background-color: yellow;
+  background-color: rgb(55, 138, 69);
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+Link,
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.bookmark,
+.bookmarkLink {
+  color: rgb(0, 77, 35);
+}
+
+#delete {
+  margin: 10px;
 }
