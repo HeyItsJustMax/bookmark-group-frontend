@@ -27,7 +27,7 @@ function Index(props) {
   const loaded = () => {
     return props.bookmarks.map((bookmark) => (
       <div key={bookmark._id} className="bookmark">
-        <Link to={`/bookmarks/${bookmark._id}`}><h1>{bookmark.title}</h1></Link>
+        <Link className="bookmarkLink" to={`/bookmarks/${bookmark._id}`}><h1>{bookmark.title}</h1></Link>
       </div>
     ));
   };
