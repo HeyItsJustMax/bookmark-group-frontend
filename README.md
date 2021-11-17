@@ -8,4 +8,19 @@ If a user clicks on the name of a bookmark, they will be taken to the show page 
 
 <img width="486" alt="Screen Shot 2021-11-17 at 5 22 26 PM" src="https://user-images.githubusercontent.com/70335526/142292022-76f0c87a-2dbe-43c4-af2c-cdce0a7f6570.png">
 
+# Notion Page
+https://www.notion.so/BOOKMARK-Greg-Max-Nic-b8bd4e590e804a29a6656fd048c944aa
 
+# Technologies Used:
+  * react
+  * react-dom
+  * react-router-dom
+  * react-scripts
+  * sass
+  * HTML
+  * JavaScript
+  * CSS
+ 
+# Future Enhancements:
+  * user authentication
+  * more styling
