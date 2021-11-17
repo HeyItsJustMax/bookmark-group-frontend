@@ -28,7 +28,7 @@ function Show(props) {
   return (
     <div className="bookmark">
       <h1>{bookmark.title}</h1>
-      <a className="bookmarkLink" target="_blank" href={bookmark.url}>Go to website</a>
+      <a className="bookmarkLink" href={bookmark.url}>Go to website</a>
       <button id="delete" onClick={removeBookmark}>
         DELETE
       </button>
