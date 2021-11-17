@@ -9,7 +9,7 @@ function Show(props) {
 
   // handleChange function for form
   const handleChange = event => {
-    setEditForm({ ...editForm, [event.target.name]: event.target.value })
+    setEditForm({ ...editForm, [event.target.title]: event.target.value })
   }
 
   // handleSubmit for form
@@ -26,18 +26,16 @@ function Show(props) {
 
   return (
     <div className="bookmark">
-      <h1>{bookmark.name}</h1>
-      <h2>{bookmark.title}</h2>
-      <img src={bookmark.image} alt={bookmark.name} />
+      <h1>{bookmark.title}</h1>
       <button id="delete" onClick={removeBookmark}>
         DELETE
       </button>
       <form onSubmit={handleSubmit}>
       <input
           type="text"
-          value={editForm.name}
-          name="name"
-          placeholder="name"
+          value={editForm.title}
+          name="title"
+          placeholder="title"
           onChange={handleChange}
         />
         <input
