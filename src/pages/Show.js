@@ -9,18 +9,18 @@ function Show(props) {
 
   // handleChange function for form
   const handleChange = event => {
-    setEditForm({ ...editForm, [event.target.title]: event.target.value })
+    setEditForm({ ...editForm, [event.target.name]: event.target.value })
   }
 
   // handleSubmit for form
   const handleSubmit = event => {
     event.preventDefault()
-    props.updateBookmarks(editForm)
+    props.updateBookmark(editForm, bookmark._id)
     props.history.push("/")
   }
 
   const removeBookmark = () => {
-    props.deleteBookmarks(bookmark._id)
+    props.deleteBookmark(bookmark._id)
     props.history.push("/")
   }
 
@@ -31,7 +31,7 @@ function Show(props) {
         DELETE
       </button>
       <form onSubmit={handleSubmit}>
-      <input
+        <input
           type="text"
           value={editForm.title}
           name="title"
